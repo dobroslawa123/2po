@@ -23,7 +23,7 @@
 		//prompt("jak masz na imie??");
 		//console.log("i'm console your browswer, hello");
 		//DOM
-		document.write("I am function write in DOM");
+		document.write("I am function write in DOM")
 		document.write("<h4> I am function write in DOM</h4>")
 		// my function
 		function myWrite(myAttribute){
@@ -72,26 +72,26 @@
 
 	   	  //Listener and function
  
-        function myFunction(){
-            document.getElementById("demo").innerHTML += "We clicked!<br>";
-        }
- 
-        document.addEventListener("click", myFunction)
-        //onclick="dodaj()"
-        function dodaj() {
-            let liczba1=parseInt(document.getElementById("liczba1").value);
-            let liczba2=parseInt(document.getElementById("liczba2").value);
-            let wynikSum=liczba1+liczba2;
-            document.getElementById("wynik").innerHTML=wynikSum;
-        } 
-        //addEventListener("click", dodajEventListener)
-        function dodajEventListener(){
-            let liczba1=parseInt(document.getElementById("liczba1").value);
-            let liczba2=parseInt(document.getElementById("liczba2").value);
-            let wynikSum=liczba1+liczba2;
-            document.getElementById("wynik").innerHTML=wynikSum;
-        } 
-        document.getElementById("dodaj").addEventListener("click", dodajEventListener)
+	        function myFunction(){
+	            document.getElementById("demo").innerHTML += "We clicked!<br>";
+	        }
+	 
+	        document.getElementById("ClickIt").addEventListener("click", myFunction)
+	        //onclick="dodaj()"
+	        function dodaj() {
+	            let liczba1=parseInt(document.getElementById("liczba1").value);
+	            let liczba2=parseInt(document.getElementById("liczba2").value);
+	            let wynikSum=liczba1+liczba2;
+	            document.getElementById("wynik").innerHTML=wynikSum;
+	        } 
+	        //addEventListener("click", dodajEventListener)
+	        function dodajEventListener(){
+	            let liczba1=parseInt(document.getElementById("liczba1").value);
+	            let liczba2=parseInt(document.getElementById("liczba2").value);
+	            let wynikSum=liczba1+liczba2;
+	            document.getElementById("wynik").innerHTML=wynikSum;
+	        } 
+	        document.getElementById("dodaj").addEventListener("click", dodajEventListener)
 	   
 	   	
    </script>
