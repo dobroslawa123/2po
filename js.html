@@ -6,8 +6,16 @@
     <title>JavaScript</title>
 </head>
 <body>
+	<button id="clickIt">Click here</button>
 	<div id="div-id-1">Text strony</div>
 	<p id=demo></p>
+	<div>
+		Liczba 1 <input type="text" id="liczba1"><br><br>
+		Liczba 2 <input type="text" id="liczba2"><br><br>
+		<button onclick="dodaj()">DODAJ</button>
+		<button id="dodaj">DODAJ EventListener</button>
+		<p id="wynik"></p>
+	</div>
 	
    
    <script>
@@ -18,9 +26,74 @@
 		document.write("I am function write in DOM");
 		document.write("<h4> I am function write in DOM</h4>")
 		// my function
-		function myWrite(attribute){
-		dokument.write() 
+		function myWrite(myAttribute){
+		dokument.write(myAttribute);
 		}
+	   	myWrite("<h1 class='element-h1'>Hello</h1>");
+	        myWrite("<br>");
+	        myWrite("<p>world!</br>");
+	        myWrite("<br>");
+	   	let myElement=document.getElementById("div-id-1");
+	        document.getElementById("div-id-1").innerHTML+="<div style='color:blue;'>It is add innerHTML</div>";
+	        document.getElementById("div-id-1").style.color="red";
+	        myElement.style.fontSize="30px";
+	   
+	   	//varible
+	   	let num=1.45;
+	   	let str="string";
+	   	let bool=true;
+	   	console.log(num);
+	   	concole.log(str);
+	   	console.log(bool);
+	   
+	   	//
+	   	let firstNum=17;
+	   	let secondNum=24;
+
+	   	//firstNum=1000+firstNum;
+	   	firstNum+=100;
+	   	console.log(firstNum);
+	   	firstNum++;
+	   	console.log(firstNum);
+	   	firstNum--;
+	   	console.log(firstNim);
+
+	   	document.write("Wynik dodawania: ", firstNum + secondNum, "<br>");
+	        document.write("Wynik reszta z dzielenia: ", firstNum % secondNum, "<br>");
+	        document.write("Wynik dzielenia: ", firstNum / secondNum, "<br>");
+	        document.write("Wynik mnożenia: ", firstNum * secondNum, "<br>");
+
+	   	//function +
+	        function summ(a,b){
+	            return a+ b;
+	        }
+	        document.write(summ(100, 1000))
+	        document.write("Moja funkcja sumy: " , summ(firstNum, secondNum))
+
+	   	  //Listener and function
+ 
+        function myFunction(){
+            document.getElementById("demo").innerHTML += "We clicked!<br>";
+        }
+ 
+        document.addEventListener("click", myFunction)
+        //onclick="dodaj()"
+        function dodaj() {
+            let liczba1=parseInt(document.getElementById("liczba1").value;)
+            let liczba2=parseInt(document.getElementById("liczba2").value;)
+            let wynikSum=liczba1+liczba2;
+            document.getElementById("wynik").innerHTML=wynikSum;
+        } 
+        //addEventListener("click", dodajEventListener)
+        function dodajEventListener(){
+            let liczba1=parseInt(document.getElementById("liczba1").value;)
+            let liczba2=parseInt(document.getElementById("liczba2").value;)
+            let wynikSum=liczba1+liczba2;
+            document.getElementById("wynik").innerHTML=wynikSum;
+        } 
+        document.getElementById("dodaj") .addEventListener("click", dodajEventListener)
+	   
+	   	
    </script>
 </body>
 </html>
